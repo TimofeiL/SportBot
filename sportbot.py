@@ -3,7 +3,10 @@ import random
 answer = '1'
 rand = 1
 rand2 = 1
-bot = telebot.TeleBot("1910814053:AAHxMH_uGn07OvE0jPUzNcsbNakIq_xtsiY", parse_mode=None)
+
+Telegram_key = '' # Ключ от бота котрого вы создадите "https://t.me/BotFather"
+
+bot = telebot.TeleBot(Telegram_key, parse_mode=None)
 @bot.message_handler(content_types=['text'])
 def send_welcome(message):
     if message.text == 'Что мне сделать?':
